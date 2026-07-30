@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triangle Pattern</title>
+</head>
+<body>
+    <pre id="output"></pre>
+<script>
+    let rows = 4;
+    let pattern = "";
+
+    for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= i; j++) {
+            pattern += "*";
+        }
+        pattern += "\n";
+    }
+
+    document.getElementById("output").textContent = pattern;
+</script>
+
+</body>
+</html>

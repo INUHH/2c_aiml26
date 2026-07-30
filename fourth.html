@@ -1,0 +1,22 @@
+<html>
+   <head>
+    <script>
+        function F(fn){
+            let FN=fn;
+            return FN; 
+        }
+        function L(ln){
+            let LN=ln;
+            return LN;
+        }
+        function Name(){
+            let firstName=F("Vikas")
+            let lastName=L("Kumar");
+            document.write(firstName+" "+lastName);
+        }
+    </script>
+    </head>
+    <body>
+        <input type="button" value="Display Name" onclick="Name()">
+    </body>
+</html>
