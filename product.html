@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Management</title>
+</head>
+<body>
+
+<h2>Product Information</h2>
+
+<p id="output"></p>
+
+<script>
+let Electronics = {
+    productId: 101,
+    productName: "Laptop",
+    price: 50000,
+    quantity: 2,
+
+    totalPrice: function() {
+        return this.price * this.quantity;
+    },
+
+    updateQuantity: function(newQuantity) {
+        this.quantity = newQuantity;
+    },
+
+    display: function() {
+        document.getElementById("output").innerHTML =
+            "Product ID: " + this.productId + "<br>" +
+            "Product Name: " + this.productName + "<br>" +
+            "Price: ₹" + this.price + "<br>" +
+            "Quantity: " + this.quantity + "<br>" +
+            "Total Price: ₹" + this.totalPrice();
+    }
+};
+
+Electronics.updateQuantity(3);
+Electronics.display();
+</script>
+
+</body>
+</html>
