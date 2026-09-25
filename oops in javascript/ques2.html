@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class BankAccount {
+            constructor(accountNumber, accountHolder, balance) {
+                this.accountNumber=accountNumber;
+                this.accountHolder=accountHolder;
+                this.balance=balance;
+            }
+            deposit(amount) {
+                this.balance+=amount;
+            }
+            withdraw(amount) {
+                if (amount<=this.balance) {
+                    this.balance -= amount;
+                } else {
+                    console.log("Insufficient funds.");
+                }
+            }
+            displayBalance() {
+                console.log("Account Number:",this.accountNumber);
+                console.log("Account Holder:",this.accountHolder);
+                console.log("Balance:",this.balance);
+            }
+            static bankInfo() {
+                console.log("This is a bank account class.");
+                console.log("It can be used to create bank account objects.");
+            }
+        }
+        let a1=new BankAccount(12345,"sachin",5000);
+        let a2=new BankAccount(67890,"vikas",3000);
+        a1.deposit(2000);
+        a2.withdraw(1000);
+        a1.displayBalance();
+        a2.deposit(500);
+        a2.withdraw(4000);
+        a2.displayBalance();
+        BankAccount.bankInfo();
+    </script>
+</body>
+</html>

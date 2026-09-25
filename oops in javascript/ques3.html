@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            constructor(empid, empname, salary) {
+                this.empid = empid;
+                this.empname = empname;
+                this.salary = salary;
+            }
+            calculateSalary() {
+                return this.salary;
+            }
+            }
+            class Manager extends Employee {
+                constructor(empid, empname, salary, department) {
+                    super(empid, empname, salary);
+                    this.department = department;
+                }
+                calculateSalary() {
+                    return this.salary + this.department;
+                }
+            }
+            let e=new Employee(101,"sachin",45000);
+            let m=new Manager(102,"virat",50000,5000);
+            console.log("Employee Salary: ",e.calculateSalary());
+            console.log("Manager Salary: ",m.calculateSalary());
+        
+    </script>
+</body>
+</html>
