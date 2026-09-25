@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    class Product{
+        constructor(pid,pname,price){
+            this.pid=pid;
+            this.pname=pname;
+            this.price=price;
+        }
+        getdiscountedprice(discount){
+            return this.price-(this.price*discount/100);
+        }
+        static compareProducts(p1,p2){
+            console.log(p1.price>p2.price?p1.pname:p2.pname);
+        }
+        display(){
+            console.log(this.pid,this.pname,this.price);
+        }
+    }
+    class Electronics extends Product{
+        constructor(pid,pname,price,warranty){
+            super(pid,pname,price);
+            this.warranty=warranty;
+        }
+        display(){
+            super.display();
+            console.log(this.warranty);
+        }
+    }  
+        let p1=new Product(101,"Mobile",20000);
+        let p2=new Product(102,"Laptop",50000);
+        let e1=new Electronics(103,"TV",30000,2);
+        p1.display();
+        p2.getdiscountedprice(10);
+        Product.compareProducts(p1,p2);
+        e1.display();  
+    
+   </script> 
+</body>
+</html>
