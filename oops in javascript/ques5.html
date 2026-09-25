@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Vehicle{
+            constructor(vid,vname,distance){
+                this.vid=vid;
+                this.vname=vname;
+                this.distance=distance;
+            }
+            calculateFare(){
+                return 0;
+            }
+            static platform(){
+                console.log("platform Quickride");
+            }
+        }
+        class Car extends Vehicle{
+            calculateFare(){
+                return this.distance*15;
+            }
+        }
+        class Bike extends Vehicle{
+            calculateFare(){
+                return this.distance*8;
+            }
+        }
+        let c= new Car("C101","Aman",50);
+        let b= new Bike("B101","Riya",30);
+        console.log("Car Fare:",c.calculateFare());
+        console.log("Bike Fare: ",b.calculateFare());
+        Vehicle.platform();
+    </script>
+</body>
+</html>
