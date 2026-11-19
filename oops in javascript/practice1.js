@@ -12,7 +12,7 @@ event.on('studentPresent',(name,rollno,subject)=>{
 });
 event.on('studentAbsent', (name, roll) => {
     console.log("\nStudent Absent:");
-    console.log(name, "with Roll Number", roll, "is absent.");
+    console.log(name,"with Roll Number",roll,"is absent.");
     absent++;
 });
 event.on('attendanceSummary', () => {
